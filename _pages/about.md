@@ -27,5 +27,5 @@ Be a good son, husband, and father, this is a long-term study.
 For more info(更多信息)
 ------
 Feel free to connect with me!
-[My wechat]（https://suyixin95.github.io/portfolio/）
+[My wechat]（https://suyixin95.github.io/portfolio/).
 [My Zhihu](https://www.zhihu.com/people/su-yixin-17)
