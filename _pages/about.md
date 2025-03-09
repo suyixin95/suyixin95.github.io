@@ -14,23 +14,23 @@ During my university years, I accumulated numerous academic accolades and secure
 
 Reserch interests(研究兴趣)
 ======
-## 1. Reliability Enhancement of Ultra Thin Folding Screen Module.
+### 1. Reliability Enhancement of Ultra Thin Folding Screen Module.
 
 ![sanzhedie](/images/sanzhedie.png){: width="600" height="400" }
 
   * Due to proprietary information constraints; we appreciate your understanding as we finalize innovative solutions for official release.
 
-## 2. Dynamics and Control of Magnetic Suspension System.
+### 2. Dynamics and Control of Magnetic Suspension System.
 
 ![cixuanfu](/images/cixuanfu.png){: width="600" height="400" }
 
   * The research on dynamics and control is not limited to maglev systems, and fields such as robotics, automobiles, aerospace, etc. cannot do without the clamping of dynamics and control. This is my doctoral research topic.
 
-## 3. Application of Large Language Models(LLM).
+### 3. Application of Large Language Models(LLM).
 
   * Studying...
 
-## 4. Live in the present and become a better person.
+### 4. Live in the present and become a better person.
   * Be a good son, husband, and father, this is a long-term study.
 
 For more info(更多信息)
