@@ -11,8 +11,8 @@ redirect_from:
 
 Education
 ======
-* B.S. in Measurement and Control Technology and Instruments, CUMTB, 2016
 * Ph.D in Dynamics and Control Theory, Tsinghua University, 2021
+* B.S. in Measurement and Control Technology and Instruments, CUMTB, 2016
 
 Work experience
 ======
@@ -22,7 +22,7 @@ Work experience
 
 * 2019.12-2020.5: Research Assistant
   * Bath University
-  * Duties included: Merging pull requests
+  * Duties included: Dynamics and Control of Maglev systems
   * Supervisor: Professor Patrick Keogh(Fellow of the Royal Academy of Engineering)
  
 * Summer 2018: Researcher
