@@ -18,7 +18,7 @@ Work experience
 ======
 * 2021.7-now: Chief Energineer
   * Huawei Technologies Co., Ltd. 
-  * Duties included: Mechanics
+  * Duties included: reliability engineering for flexible displays and advanced manufacturing technologies in the semiconductor industry
 
 * 2019.12-2020.5: Research Assistant
   * Bath University
