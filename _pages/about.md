@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to my professional portfolio and feel free to connect with me"
+title: "Welcome to My Professional Portfolio"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -15,17 +15,25 @@ During my university years, I accumulated numerous academic accolades and secure
 Reserch interests(研究兴趣)
 ======
 1. Reliability Enhancement of Ultra Thin Folding Screen Module.
+
 ![sanzhedie](/images/sanzhedie.png)
+
 Due to proprietary information constraints; we appreciate your understanding as we finalize innovative solutions for official release.
+
 1. Dynamics and Control of Magnetic Suspension System.
+
 ![cixuanfu](/images/cixuanfu.png)
+
 The research on dynamics and control is not limited to maglev systems, and fields such as robotics, automobiles, aerospace, etc. cannot do without the clamping of dynamics and control. This is my doctoral research topic.
+
 1. Application of Large Language Models(LLM).
+
 1. Live in the present and become a better person.
 Be a good son, husband, and father, this is a long-term study.
 
 For more info(更多信息)
 ------
 Feel free to connect with me!
-[My wechat]（https://suyixin95.github.io/portfolio/).
-[My Zhihu](https://www.zhihu.com/people/su-yixin-17)
+[My WeChat(微信)](https://suyixin95.github.io/portfolio/)
+
+[My Zhihu(知乎)](https://www.zhihu.com/people/su-yixin-17)
