@@ -9,8 +9,8 @@
 locale                   : "en-US"
 title                    : "Yixin Su / Personal Page"
 title_separator          : "-"
-name                     : &name "Yixin Su (苏一新)"
-description              : &description "A PhD from Tsinghua University, a senior Engineer in Huawei now"
+name                     : &name "Yixin Su     (苏一新)"
+description              : &description "A PhD from Tsinghua University, a Chief Engineer in Huawei now"
 url                      : https://suyixin95.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "suyixin95/suyixin95.github.io"
@@ -209,15 +209,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
   # _publications
   - scope:
       path: ""
@@ -236,14 +227,7 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+      
 
 # Sass/SCSS
 sass:
