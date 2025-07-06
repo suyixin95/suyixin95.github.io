@@ -1,6 +1,7 @@
 ---
 title: "Identification of system parameters and external forces in AMB-supported PMSM system"
 collection: publications
+category: conferences
 permalink: /publication/2022-paper-title-number-2
 excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
 date: 2022
