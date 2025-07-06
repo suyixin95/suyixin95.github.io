@@ -5,27 +5,29 @@ permalink: /publications/
 author_profile: true
 ---
 
----
-title: "Nonlinear dynamic simulation and parametric analysis of a rotor-AMB-TDB system experiencing strong base shock excitations"
-collection: publications
-permalink: /publication/2021-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2021
-venue: 'Journal 1'
-paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/S0094114X20302913'
-citation: 'Y Su, Y Gu, PS Keogh, S Yu, G Ren - Mechanism and Machine Theory, 2021'
----
-
-[Download paper here](https://www.sciencedirect.com/science/article/abs/pii/S0094114X20302913)
-
-Recommended citation: Y Su, Y Gu, PS Keogh, S Yu, G Ren - Mechanism and Machine Theory, 2021.
-
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<!-- New style rendering if publication categories are defined -->
+{% if site.publication_category %}
+  {% for category in site.publication_category  %}
+    {% assign title_shown = false %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2>{{ category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.publications reversed %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
