@@ -1,6 +1,7 @@
 ---
 title: "Nonlinear dynamic simulation and parametric analysis of a rotor-AMB-TDB system experiencing strong base shock excitations"
 collection: publications
+manuscripts
 permalink: /publication/2021-paper-title-number-1
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2021
