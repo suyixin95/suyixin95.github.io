@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I earned my Ph.D. in Dynamics and Control from [Tsinghua University](https://www.tsinghua.edu.cn/) in 2021. Currently, I serve as a Chief Engineer at [Huawei Technologies](https://www.huawei.com/), where my research focuses on soft matter and coating mechanics, micro/nano mechanical characterization methods, and metrology algorithms. My work primarily applies to reliability engineering for flexible displays and advanced manufacturing technologies in the semiconductor industry. 
+1I earned my Ph.D. in Dynamics and Control from [Tsinghua University](https://www.tsinghua.edu.cn/) in 2021. Currently, I serve as a Chief Engineer at [Huawei Technologies](https://www.huawei.com/), where my research focuses on soft matter and coating mechanics, micro/nano mechanical characterization methods, and metrology algorithms. My work primarily applies to reliability engineering for flexible displays and advanced manufacturing technologies in the semiconductor industry. 
 
 During my university years, I accumulated numerous academic accolades and secured multiple competitive job offers. However, even with these accomplishments, I occasionally find myself navigating professional uncertainties. I'm keen to connect with new acquaintances to exchange perspectives on career trajectories, share experiences of Beijing's vibrant urban life, and collaboratively explore paths for continuous self-improvement and professional development.
 
