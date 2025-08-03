@@ -11,28 +11,25 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Dynamics and Control Theory, Tsinghua University, 2021
+* B.S. in Measurement and Control Technology and Instruments, CUMTB, 2016
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* 2021.7-now: Chief Energineer
+  * Huawei Technologies Co., Ltd. 
+  * Duties included: reliability engineering for flexible displays and advanced manufacturing technologies in the semiconductor industry
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2019.12-2020.5: Research Assistant
+  * Bath University
+  * Duties included: Dynamics and Control of Maglev systems
+  * Supervisor: Professor Patrick Keogh(Fellow of the Royal Academy of Engineering)
+ 
+* Summer 2018: Researcher
+  * GREE Electric Appliances, INC. of Zhuhai
+  * Duties included: Magnetic levitation air compressor
   
-Skills
+<!-- Skills
 ======
 * Skill 1
 * Skill 2
@@ -61,4 +58,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->

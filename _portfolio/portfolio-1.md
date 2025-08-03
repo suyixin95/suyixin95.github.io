@@ -1,6 +1,6 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Contact information"
+excerpt: "My WeChat<br/><img src='/images/weixin.png'>"
 collection: portfolio
 ---
 
