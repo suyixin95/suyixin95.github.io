@@ -16,7 +16,7 @@ Reserch interests(研究兴趣)
 ======
 ### 1. Reliability Enhancement of Ultra Thin Folding Screen Module.
 
-![sanzhedie](/images/sanzhedie.png){: width="300" height="200" }
+![sanzhedie](/images/sanzhedie.png){: width="200" height="100" }
 
   * Due to proprietary information constraints; we appreciate your understanding as we finalize innovative solutions for official release.
 
