@@ -16,14 +16,14 @@ Reserch interests(研究兴趣)
 ======
 ### 1. Reliability Enhancement of Ultra Thin Folding Screen Module.
 
-# <div align=center>![sanzhedie](/images/sanzhedie.png){: width="200" height="100" }</div>
+<!-- <div align=center>![sanzhedie](/images/sanzhedie.png){: width="200" height="100" }</div> -->
 <div align=center><img src=/images/sanzhedie.png width="200"></div>
 
   * Due to proprietary information constraints; we appreciate your understanding as we finalize innovative solutions for official release.
 
 ### 2. Dynamics and Control of Magnetic Suspension System.
 
-# <div align=center>![cixuanfu](/images/cixuanfu.png){: width="300" height="200" }</div>
+<!-- <div align=center>![cixuanfu](/images/cixuanfu.png){: width="300" height="200" }</div> -->
 <div align=center><img src=/images/cixuanfu.png width="200"></div>
 
   * The research on dynamics and control is not limited to maglev systems, and fields such as robotics, automobiles, aerospace, etc. cannot do without the clamping of dynamics and control. This is my doctoral research topic.
