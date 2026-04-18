@@ -1,5 +1,5 @@
 ---
-title: "Paper Title Number 1"
+title: "Nonlinear dynamic simulation and parametric analysis of a rotor-AMB-TDB system experiencing strong base shock excitations"
 collection: publications
 category: manuscripts
 permalink: /publication/2009-10-01-paper-title-number-1
