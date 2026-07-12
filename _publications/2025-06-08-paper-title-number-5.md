@@ -2,7 +2,7 @@
 title: "Dynamic analysis of flexible rotor suspension by active magnetic bearing with LQR controller"
 collection: publications
 category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
+permalink: /publication/2025-06-08-paper-title-number-5
 excerpt: 'To analyze dynamic characteristics of flexible rotor suspended by AMBs with linear quadratic regulation (LQR) controller, a simple and effective method based on numerical calculation of unbalanced response is proposed in this article.'
 date: 2018-07-22
 venue: 'Proceedings of the 2018 26th  International Conference on Nuclear Engineering'

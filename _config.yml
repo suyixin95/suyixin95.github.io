@@ -12,7 +12,7 @@ title                    : "Yixin Su / Personal Page"
 title_separator          : "-"
 name                     : &name "Yixin Su(苏一新)"
 description              : &description "A PhD from Tsinghua University, a Chief Engineer in Huawei now"
-url                      : https://suyixin95.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://suyixin.site # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "suyixin95/suyixin95.github.io"
 
@@ -150,7 +150,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  false # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
 

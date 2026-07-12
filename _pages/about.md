@@ -12,7 +12,7 @@ Hi, I am Yixin SU, a Ph.D. in Dynamics and Control from [Tsinghua University](ht
 
 During my university years, I accumulated numerous academic accolades and secured multiple competitive job offers. However, even with these accomplishments, I occasionally find myself navigating professional uncertainties. I'm keen to connect with new acquaintances to exchange perspectives on career trajectories, share experiences of Beijing's vibrant urban life, and collaboratively explore paths for continuous self-improvement and professional development.
 
-Reserch interests(研究兴趣)
+Research interests(研究兴趣)
 ======
 ### 1. Reliability Enhancement of Ultra Thin Folding Screen Module.
 
@@ -41,6 +41,6 @@ For more info(更多信息)
 ------
 Feel free to connect with me!
 
-[My WeChat(微信)](https://suyixin95.github.io/portfolio/)
+[My WeChat(微信)](/portfolio/)
 
 [My Zhihu(知乎)](https://www.zhihu.com/people/su-yixin-17)

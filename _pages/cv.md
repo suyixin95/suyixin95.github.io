@@ -16,7 +16,7 @@ Education
 
 Work experience
 ======
-* 2021.7-now: Chief Energineer
+* 2021.7-now: Chief Engineer
   * Huawei Technologies Co., Ltd. 
   * Duties included: reliability engineering for flexible displays and advanced manufacturing technologies in the semiconductor industry
 
