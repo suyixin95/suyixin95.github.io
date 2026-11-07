@@ -1,0 +1,29 @@
+# 全站共用资料。updated_on 是内容更新日期，修改资料后请一起更新。
+# 本次仅迁移现有信息；职称中英文和历史经历结束时间仍需本人核对。
+name: Yixin Su (苏一新)
+degree:
+  en: Ph.D. from Tsinghua University
+  zh: 清华大学博士
+avatar: /images/suyixin.png
+location: Beijing (北京)
+email: syx16@tsinghua.org.cn
+current:
+  employer: Huawei Technologies
+  employer_zh: 华为技术有限公司
+  employer_url: https://www.huawei.com/
+  role:
+    en: Chief Engineer
+    zh: 主任工程师
+  since: '2021.07'
+  summary:
+    en: My work focuses on soft matter and coating mechanics, micro/nano mechanical characterization methods,
+      and metrology algorithms. These efforts are mainly applied to reliability engineering for flexible displays
+      and advanced manufacturing technologies in the semiconductor industry.
+    zh: 主要从事软物质与涂层力学、微纳米力学表征方法以及计量算法方面的研究，相关成果主要应用于柔性显示的可靠性工程以及半导体行业的先进制造技术。
+links:
+- label: Google Scholar (谷歌学术)
+  url: https://scholar.google.com/citations?user=lRXWqN8AAAAJ&hl=zh-CN
+- label: Zhihu (知乎)
+  url: https://www.zhihu.com/people/su-yixin-17
+wechat_image: /images/weixin.png
+updated_on: '2026-11-07'

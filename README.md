@@ -1,96 +1,113 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# 苏一新的个人网站
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+这是一个精简的 Jekyll 静态网站，部署在 GitHub Pages，域名为 `suyixin.site`。日常更新以本地 Markdown / YAML 文件为主，不需要 npm、数据库或管理后台。
 
-# Getting Started
+## 日常更新改哪里
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+| 要更新什么 | 修改文件 |
+| --- | --- |
+| 姓名、学位、头像、邮箱、地点、当前公司及职位、现职介绍、社交链接、微信二维码 | `_data/profile.yml` |
+| 首页个人介绍、研究兴趣 | `_pages/about.md` |
+| 教育、历史工作、科研项目、专利、奖励、技能 | `_pages/cv.md` |
+| 新增或修改一篇论文 | `_publications/` 中对应的 Markdown 文件 |
+| 主导航的顺序或名称 | `_data/navigation.yml` |
+| 页面外观、手机布局、打印样式 | `assets/css/site.css` |
+| 域名、构建配置 | `_config.yml`；更换域名还要同步 `CNAME` 和 DNS |
 
-See more info at https://academicpages.github.io/
+资料文件会自动同步到侧栏、首页现职介绍、简历现职、联系页和搜索摘要。`updated_on` 是**内容更新日期**，请在更新资料时一起修改。不会用每次部署时间冒充资料更新时间。
 
-## Running locally
+长篇经历继续写 Markdown。资料中的中英文是两份明确的内容，请同时更新。现有 `Chief Engineer / 高级工程师` 沿用原文，没有擅自重新翻译；历史科研项目中的“至今”也需要你自己核对结束时间。
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+### 换工作或调整职位
 
-1. Clone the repository and made updates as detailed above.
+1. 将此前任职经历记入 `_pages/cv.md` 的历史工作部分，补上实际结束时间。
+2. 修改 `_data/profile.yml` 的 `current`（公司、链接、中英文职位、开始年月、中英文工作内容）。
+3. 如研究方向也变了，修改 `_pages/about.md` 的研究兴趣；更新 `updated_on`。
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
+### 新增论文
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+在 `_publications/` 新建有意义的文件名，例如 `2027-short-title.md`。以下只是格式示例，请填写真实内容后再发布：
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+```yaml
+---
+title: "论文标题"
+permalink: /publication/2027-short-title/
+year: 2027
+category: manuscripts
+venue: "期刊或会议名称"
+citation: "完整引用信息"
+selected: true
+---
 
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
+英文摘要。
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
+**中文摘要：** 中文摘要。
 ```
 
-You should now be able to access the website from `localhost:4000`.
+- `category`：期刊填 `manuscripts`，会议填 `conferences`。
+- `selected: true`：自动进入简历代表作列表；不需要在 CV 再抄一遍。
+- `paperurl`：可选，使用真实的 HTTPS 论文地址；不知道时直接省略，不放占位链接。
+- `date`：可选，只有知道准确日期时才填 `YYYY-MM-DD`；只知道年份就只填 `year`。
+- `note`：可选，注明已确认的奖项等信息。
+- 标题改变时通常无需改 `permalink`，避免别人收藏的链接失效。旧论文保留原地址，文件名已整理。
 
-### Using the DevContainer in VS Code
+YAML 用空格缩进，带冒号的文字用引号包起来；`true` / `false` 不加引号。页面列表会自动按年份倒序更新。
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development coontainer configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+## 本地检查和预览（Windows）
 
-# Maintenance
+一次性准备：安装 **Ruby 3.3 + Devkit**（RubyInstaller 官方版本）和 **Python 3.10 或更新版本**。确保 `ruby`、`bundle`、`python` 能在 PowerShell 中运行。进入包含本 README 的目录。
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+```powershell
+bundle config set --local path vendor/bundle
+bundle install
+python -m pip install -r requirements-dev.txt
+```
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+首次 `bundle install` 会生成 `Gemfile.lock`。请把它一起提交，让后续本机和 CI 使用同一套依赖；不要把 `vendor/` 提交。
 
-## Bugfixes and enhancements
+每次更新后：
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+```powershell
+python scripts/check_content.py
+bundle exec jekyll serve --livereload
+```
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+浏览器打开 `http://127.0.0.1:4000`。修改 Markdown / YAML 后查看刷新结果；修改 `_config.yml` 则停止并重启预览。确认首页、简历、论文和联系方式，在窄窗口中也能正常阅读。
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+提交前完整检查：
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+```powershell
+python -m unittest discover -s tests
+python scripts/check_content.py
+bundle exec jekyll build --strict_front_matter
+python scripts/check_site.py _site
+```
+
+内容检查会报告缺少字段、无效日期、重复页面地址、缺失图片和导航错误。构建后的检查会验证站内链接、锚点和资源；不会联网检查第三方网站是否可用。
+
+## 提交与部署
+
+在真正的 Git 克隆中编辑后，先通过上述检查，再查看修改：
+
+```powershell
+git diff --check
+git diff --stat
+git status --short
+```
+
+确认差异后，选择本次修改文件提交。GitHub Pages 继续沿用仓库原有的分支发布方式；本次没有改变你的远端设置。新增的 `Check website` 工作流会在 push / pull request 时运行内容检查、Jekyll 构建及站内链接检查。
+
+**注意：这个检查工作流不是部署工作流，也不会自动阻止独立的分支式 Pages 发布。** 建议在工作分支提交，确认 pull request 的检查为绿色后再合并到发布分支。将来如果希望“检查成功才部署”，可以单独改为 GitHub Actions 发布并在仓库 Pages 设置中切换来源。
+
+如果拿到的是没有 `.git` 的源码快照，请不要重新初始化并强推覆盖远端历史。应先正常克隆原仓库，在新分支应用本次交付的 `maintenance.patch`，按交付说明检查后再提交。
+
+## 架构和保留内容
+
+- 内容、模板、样式分别在 `_data` / `_pages` / `_publications`、`_layouts` / `_includes`、`assets/css`。
+- 只有 Jekyll、sitemap、redirect 插件和本地预览服务器；Python 的 PyYAML 只用于开发检查。
+- 主要页面无需 JavaScript，手机导航直接显示，深色模式跟随系统，简历支持浏览器打印为 PDF。
+- `/portfolio/` 和旧微信详情页跳转到 `/contact/`；原论文地址、`/about/`、`/about.html` 和 `/resume` 继续可用。
+- 原始五篇论文摘要、个人照片、研究图片、二维码和真实履历保留；CV 中独有的一篇中文论文纳入统一目录。
+- 示例博客、示例教学与演讲、演讲地图及其自动提交任务、示例 JSON 简历、评论服务、旧 npm/JS/Sass 打包、模板配图已移除。
+
+完整审查依据见 [架构审查](docs/architecture.md)。原项目 MIT 许可证保留在 `LICENSE`。

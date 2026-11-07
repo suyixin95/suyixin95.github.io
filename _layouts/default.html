@@ -1,31 +1,50 @@
----
-layout: compress
----
-
-{% include base_path %}
-
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+<html lang="{{ site.locale | default: 'en-US' }}">
   <head>
-    {% include head.html %}
-    {% include head/custom.html %}
+    {% assign profile = site.data.profile %}
+    {% capture summary %}{{ profile.degree.en }}. {{ profile.current.role.en }}, {{ profile.current.employer }}. {{ profile.current.summary.en }}{% endcapture %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | escape }} · {{ profile.name | escape }}</title>
+    <meta name="description" content="{{ page.description | default: page.excerpt | default: summary | strip_html | strip_newlines | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title | escape }} · {{ profile.name | escape }}">
+    <meta property="og:description" content="{{ page.description | default: page.excerpt | default: summary | strip_html | strip_newlines | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ profile.avatar | absolute_url }}">
+    <link rel="icon" href="{{ '/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Person",
+       "name":{{ profile.name | jsonify }},"url":{{ '/' | absolute_url | jsonify }},
+       "image":{{ profile.avatar | absolute_url | jsonify }},
+       "jobTitle":{{ profile.current.role.en | jsonify }},
+       "worksFor":{"@type":"Organization","name":{{ profile.current.employer | jsonify }}}}
+    </script>
   </head>
-
   <body>
-
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
-    {{ content }}
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+    <a class="skip-link" href="#main">Skip to content / 跳至正文</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-name" href="{{ '/' | relative_url }}">{{ profile.name | escape }}</a>
+        <nav aria-label="Main navigation">
+          {% for item in site.data.navigation.main %}
+          <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title | escape }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+    <div class="site-grid">
+      <aside class="profile" aria-label="Personal profile">{% include profile.html %}</aside>
+      <main id="main" tabindex="-1">
+        <article><h1>{{ page.title | escape }}</h1>{{ content }}</article>
+      </main>
     </div>
-
-    {% include scripts.html %}
-
+    <footer class="site-footer">
+      <span>© {{ site.time | date: '%Y' }} {{ profile.name | escape }}</span>
+      <span>Content updated / 内容更新：{{ profile.updated_on | escape }}</span>
+      <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a>
+    </footer>
   </body>
 </html>

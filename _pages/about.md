@@ -1,8 +1,6 @@
 ---
 permalink: /
 title: "Welcome to My Personal Page (欢迎来到我的个人主页)"
-excerpt: "About me"
-author_profile: true
 redirect_from: 
   - /about/
   - /about.html
@@ -12,9 +10,7 @@ Hi, I am Yixin SU (苏一新), who received my Ph.D. in Dynamics and Control fro
 
 大家好，我是苏一新。我于 2021 年在[清华大学](https://www.tsinghua.edu.cn/)获得动力学与控制专业博士学位，师从于溯源教授与任革学教授，并曾在英国[巴斯大学](https://www.bath.ac.uk/)与英国皇家工程院院士 Patrick S. Keogh 教授联合培养。我的博士研究聚焦于多体动力学理论、智能控制、非线性振动、振动抑制以及磁悬浮系统动力学设计方法。
 
-Currently, I serve as a Chief Engineer at [Huawei Technologies](https://www.huawei.com/), where my work focuses on soft matter and coating mechanics, micro/nano mechanical characterization methods, and metrology algorithms. These efforts are mainly applied to reliability engineering for flexible displays and advanced manufacturing technologies in the semiconductor industry.
-
-目前，我在[华为技术有限公司](https://www.huawei.com/)担任高级工程师，主要从事软物质与涂层力学、微纳米力学表征方法以及计量算法方面的研究，相关成果主要应用于柔性显示的可靠性工程以及半导体行业的先进制造技术。
+{% include current-role.html %}
 
 I have a cross-disciplinary background spanning mechatronics, dynamics, and control, with a broad research perspective and solid hands-on engineering experience. I am diligent, responsible, and well-organized in my work, and I enjoy collaborating with others. I am always happy to meet new friends to exchange views on career development, share experiences of life in Beijing, and explore paths for continuous self-improvement together.
 
@@ -25,14 +21,14 @@ Research interests (研究兴趣)
 
 ### 1. Reliability Enhancement of Ultra-Thin Folding Screen Modules (超薄折叠屏模组的可靠性提升)
 
-<div align=center><img src='/images/sanzhedie.png' width="200"></div>
+<figure class="research-image"><img src="{{ '/images/sanzhedie.png' | relative_url }}" width="200" alt="Ultra-thin folding screen module (超薄折叠屏模组)" loading="lazy"></figure>
 
   * I work on the mechanics and reliability of ultra-thin folding display modules. Due to proprietary information constraints, detailed results cannot be disclosed yet; we appreciate your understanding as we finalize innovative solutions for official release.
   * 我从事超薄折叠显示模组的力学与可靠性研究。由于涉及专有信息，目前暂时无法公开具体成果，相关创新方案正在整理以待正式发布，感谢您的理解。
 
 ### 2. Dynamics and Control of Magnetic Suspension Systems (磁悬浮系统的动力学与控制)
 
-<div align=center><img src='/images/cixuanfu.png' width="200"></div>
+<figure class="research-image"><img src="{{ '/images/cixuanfu.png' | relative_url }}" width="200" alt="Magnetic suspension system (磁悬浮系统)" loading="lazy"></figure>
 
   * This was the topic of my doctoral research. Dynamics and control are not limited to maglev systems; fields such as robotics, automobiles, and aerospace all rely heavily on dynamics and control.
   * 这是我的博士研究课题。动力学与控制并不局限于磁悬浮系统，机器人、汽车、航空航天等领域同样都离不开动力学与控制。
@@ -54,8 +50,8 @@ Feel free to connect with me!
 
 欢迎与我联系交流！
 
-[My WeChat (微信)](/portfolio/)
+[WeChat & contact (微信与联系方式)]({{ '/contact/' | relative_url }})
 
-[My Zhihu (知乎)](https://www.zhihu.com/people/su-yixin-17)
-
-[My Google Scholar (谷歌学术)](https://scholar.google.com/citations?user=lRXWqN8AAAAJ&hl=zh-CN)
+{% for link in site.data.profile.links %}
+- [{{ link.label }}]({{ link.url }})
+{% endfor %}

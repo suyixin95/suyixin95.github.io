@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<p class="muted">{{ page.venue | escape }} · {{ page.year }}{% if page.note %} · {{ page.note | escape }}{% endif %}</p>
+{% if page.paperurl %}<p><a href="{{ page.paperurl | escape }}">Read publication / 阅读论文 ↗</a></p>{% endif %}
+{{ content }}
+<h2>Citation / 引用</h2>
+<p>{{ page.citation | escape }}</p>
+<p><a href="{{ '/publications/' | relative_url }}">← All publications / 全部论文</a></p>
