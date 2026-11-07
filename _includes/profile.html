@@ -1,0 +1,11 @@
+{% assign person = site.data.profile %}
+<img class="avatar" src="{{ person.avatar | relative_url }}" alt="{{ person.name | escape }}" width="160" height="160" fetchpriority="high">
+<h2>{{ person.name | escape }}</h2>
+<p>{{ person.degree.en | escape }}<br><span lang="zh-CN">{{ person.degree.zh | escape }}</span></p>
+<p>{{ person.current.role.en | escape }}<br><span lang="zh-CN">{{ person.current.role.zh | escape }}</span><br>{{ person.current.employer | escape }}</p>
+{% if person.location %}<p class="muted">{{ person.location | escape }}</p>{% endif %}
+<ul class="profile-links">
+  <li><a href="mailto:{{ person.email | escape }}">Email / 邮箱</a></li>
+  {% for link in person.links %}<li><a href="{{ link.url | escape }}">{{ link.label | escape }}</a></li>{% endfor %}
+  <li><a href="{{ '/contact/' | relative_url }}">WeChat / 微信</a></li>
+</ul>

@@ -1,0 +1,69 @@
+:root {
+  color-scheme: light dark;
+  --background: #fff; --text: #27313c; --muted: #596574;
+  --accent: #146b86; --line: #dce3e8; --surface: #f5f8fa;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --background: #182129; --text: #e4eaf0; --muted: #b0bdc8; --accent: #81cbe4; --line: #3d4a56; --surface: #202c36; }
+}
+* { box-sizing: border-box; }
+html { font-size: 16px; scroll-padding-top: 1rem; }
+body { margin: 0; background: var(--background); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; line-height: 1.8; }
+a { color: var(--accent); text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+img { max-width: 100%; height: auto; }
+p, ul, ol { margin: 0 0 1.25rem; }
+li > ul { margin-bottom: .8rem; }
+h1, h2, h3 { line-height: 1.35; overflow-wrap: anywhere; }
+h1 { margin: 0 0 2rem; font-size: clamp(1.65rem, 3vw, 2.15rem); letter-spacing: -.035em; }
+h2 { margin: 2.5rem 0 1rem; font-size: 1.4rem; border-bottom: 1px solid var(--line); padding-bottom: .6rem; }
+h3 { margin-top: 1.8rem; font-size: 1.08rem; }
+.muted { color: var(--muted); font-size: .9rem; }
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 2; padding: .6rem 1rem; background: var(--background); }
+.skip-link:focus { top: .5rem; }
+.site-header { border-bottom: 1px solid var(--line); }
+.header-inner { max-width: 1180px; margin: auto; padding: 1.25rem 2rem; display: flex; align-items: center; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
+.site-name { font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.15rem; }
+nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-size: .9rem; }
+nav a { color: var(--muted); text-decoration: none; padding-block: .35rem; }
+nav a[aria-current="page"] { color: var(--accent); font-weight: 650; border-bottom: 2px solid var(--accent); }
+.site-grid { max-width: 1180px; margin: auto; padding: 3rem 2rem 5rem; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 4rem; }
+.profile { font-size: .9rem; }
+.avatar { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; border: 1px solid var(--line); }
+.profile h2 { border: 0; padding: 0; margin: 1rem 0; font-size: 1.2rem; }
+.profile p { margin-bottom: .9rem; }
+.profile-links { list-style: none; padding: 0; }
+.profile-links li { margin-bottom: .35rem; }
+.profile-links a { display: inline-block; padding: .2rem 0; }
+main { min-width: 0; }
+main:focus { outline: none; }
+.research-image { margin: 1.5rem 0; }
+.research-image img { border-radius: .35rem; }
+.publication-list { list-style: none; padding: 0; }
+.publication-list > li { padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
+.publication-title { font-weight: 650; font-size: 1.04rem; }
+.publication-list p { margin: .5rem 0; }
+.wechat { background: white; padding: 1rem; border: 1px solid var(--line); border-radius: .5rem; }
+.site-footer { border-top: 1px solid var(--line); padding: 1.5rem 2rem; color: var(--muted); font-size: .8rem; display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem 2rem; }
+pre { padding: 1rem; background: var(--surface); overflow-x: auto; }
+code { overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .header-inner { padding: 1rem 1.25rem; }
+  nav { gap: .3rem 1.1rem; }
+  .site-grid { grid-template-columns: minmax(0, 1fr); padding: 1.5rem 1.25rem 3rem; gap: 2rem; }
+  .profile { border-bottom: 1px solid var(--line); padding-bottom: 1rem; display: flow-root; }
+  .avatar { width: 100px; height: 100px; float: left; margin: 0 1.25rem .75rem 0; }
+  .profile h2 { margin-top: 0; }
+  .profile-links { clear: both; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: 0; }
+}
+@media print {
+  :root { --background: #fff; --text: #000; --muted: #333; --line: #ccc; --accent: #000; }
+  .site-header, .profile, .site-footer, .skip-link { display: none; }
+  .site-grid { display: block; padding: 0; }
+  body { font-size: 10pt; }
+  h1, h2, h3 { break-after: avoid; }
+  img { max-height: 180px; width: auto; }
+  a { text-decoration: none; }
+  @page { margin: 18mm; }
+}
