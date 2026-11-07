@@ -1,0 +1,3 @@
+{% assign current = site.data.profile.current %}
+<p>Currently, I serve as a {{ current.role.en | escape }} at <a href="{{ current.employer_url | escape }}">{{ current.employer | escape }}</a>. {{ current.summary.en | escape }}</p>
+<p lang="zh-CN">目前，我在<a href="{{ current.employer_url | escape }}">{{ current.employer_zh | default: current.employer | escape }}</a>担任{{ current.role.zh | escape }}，{{ current.summary.zh | escape }}</p>

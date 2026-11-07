@@ -1,0 +1,10 @@
+{% assign publication = include.paper %}
+<li>
+  <a class="publication-title" href="{{ publication.url | relative_url }}">{{ publication.title | escape }}</a>
+  <p class="muted">{{ publication.venue | escape }} · {{ publication.year }}{% if publication.note %} · {{ publication.note | escape }}{% endif %}</p>
+  {% unless include.compact %}
+    {% if publication.excerpt %}<div>{{ publication.excerpt | markdownify }}</div>{% endif %}
+    <p>{{ publication.citation | escape }}</p>
+    {% if publication.paperurl %}<a href="{{ publication.paperurl | escape }}">Read publication / 阅读论文 ↗</a>{% endif %}
+  {% endunless %}
+</li>

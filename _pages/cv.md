@@ -1,19 +1,16 @@
 ---
-layout: archive
 title: "CV (个人简历)"
 permalink: /cv/
-author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
 
 Basic Information (基本信息)
 ======
-* Yixin Su (苏一新), Ph.D. from Tsinghua University; Member of the Communist Party of China; born June 1995, Henan, China.
-* 苏一新，清华大学博士；中共党员；1995 年 6 月生，河南人。
-* Email: syx16@tsinghua.org.cn
+* {{ site.data.profile.name }}, {{ site.data.profile.degree.en }}; Member of the Communist Party of China; born June 1995, Henan, China.
+* {{ site.data.profile.name }}，{{ site.data.profile.degree.zh }}；中共党员；1995 年 6 月生，河南人。
+* Email: [{{ site.data.profile.email }}](mailto:{{ site.data.profile.email }})
 
 Education (教育经历)
 ======
@@ -38,10 +35,9 @@ Education (教育经历)
 
 Work & Internship Experience (工作与实习经历)
 ======
-* **2021.7–now: Chief Engineer, Huawei Technologies Co., Ltd.**
-  * **2021.7–至今：华为技术有限公司 高级工程师**
-  * Reliability engineering for flexible displays and advanced manufacturing technologies in the semiconductor industry.
-  * 从事柔性显示可靠性工程以及半导体行业先进制造技术相关工作。
+**{{ site.data.profile.current.since }}–present / 至今**
+
+{% include current-role.html %}
 
 * **2019.12–2020.5: Research Assistant, University of Bath**
   * **2019.12–2020.5：巴斯大学 科研助理**
@@ -96,15 +92,14 @@ Research Experience (研究经历)
 
 Selected Publications (代表性论文)
 ======
-You can also find my articles on my [Google Scholar profile](https://scholar.google.com/citations?user=lRXWqN8AAAAJ&hl=zh-CN). A more detailed list is available on the [Publications](/publications/) page.
+完整列表与摘要见 [Publications (论文)]({{ '/publications/' | relative_url }})。
 
-您也可以在我的[谷歌学术主页](https://scholar.google.com/citations?user=lRXWqN8AAAAJ&hl=zh-CN)找到我的文章，更完整的列表请见[论文页面](/publications/)。
-
-* Yixin Su, Yongpeng Gu, Patrick Keogh, et al. *Nonlinear dynamic simulation and parametric analysis of a rotor-AMB-TDB system experiencing strong base shock excitations.* **Mechanism and Machine Theory** 155 (2021) 104071. (Q1, Top journal)
-* Yixin Su, Yongpeng Gu, Patrick Keogh, et al. *Shock-induced persistent contact and synchronous re-levitation control in rotor/magnetic bearing systems.* **Mechanical Systems and Signal Processing.** (Q1, Top journal)
-* Yixin Su, Yanhui Ma, Yongpeng Gu, et al. *Improvement of low frequency vibration isolation capability of AMB using a cascade PID controller.* Proceedings of ASME Turbo Expo 2018. (EI)
-* Yixin Su, Yanhui Ma, Qian Shi, et al. *Dynamic analysis of flexible rotor suspension by active magnetic bearing with LQR controller.* Proceedings of the 26th ICONE. (EI, **Best Paper Award**)
-* 苏一新, 马彦会, 于溯源, 等. *基于 BP 神经网络模型的磁悬浮水泵 PID 参数优化.* 流体机械, 2018, 46(01), 20-24+33.
+{% assign selected_papers = site.publications | where: "selected", true | sort: "year" | reverse %}
+<ul class="publication-list">
+{% for paper in selected_papers %}
+  {% include publication-card.html paper=paper compact=true %}
+{% endfor %}
+</ul>
 
 Invention Patents (发明专利)
 ======
